@@ -14,6 +14,14 @@ app.use(express.json());
 // Static directory
 app.use(express.static("app/public"));
 
+// Require dependencies
+var http = require("http");
+var fs = require("fs");
+
+// Set our port to 8080
+var PORT = 8080;
+
+
 // Routes
 // =============================================================
 require("./app/routes/api-routes.js")(app);
