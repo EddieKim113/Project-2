@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <style>
+                /* Set the size of the div element that contains the map */
+               #map {
+                 height: 400px;  
+                 width: 100%;  /* The width is the width of the web page */
+                }
+             </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Google Places Link -->
+    <script type="text/javascript" src="assets/javascript/map.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADGBWsEdFbuCg0xzSfPVrbm1mihab7ro4&libraries=geometry,places&callback=initAutocomplete" async defer></script>
+     -->
+           
+</head>
+
+<body class="wallpaper">
+        <!-- Navigation bar -->
+        
+	<nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt="CLOUD VIBES HOOKAH LOUNGE" id="logo"></a>
+                </div>
+                    <ul class="nav navbar-nav navbar-right menu">
+                         <li class="home-btn"><a href="index.html">HOME</a></li>
+                        <li class="hookah-btn"><a href="menu.html">HOOKAH MENU</a></li>
+                        <li class="make-btn"><a href="reservation.html">MAKE A RESERVATION</a></li>
+                        <li class="Hours-btn"><a href="hours.html">HOURS&LOCATION</a></li>
+                        <li class="contact-btn"><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+            </div>
+            
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <h3>Cloud Vibes Hookah Lounge</h3>
+                <p>4730 Eagle Rock Blvd</p>
+                <p>Los Angeles, CA 90041</p>
+                <div id="map"></div>
+              </div>
+              <div class="col-sm-6">
+                <h3>Hours Open</h3>
+                <li>Mon - Thu: 5:00pm - 12:00am</li>
+                <li>Fri - Sun: 1:00pm - 1:00am</li>
+              </div>
+             
+            </div>
+          </div>
+
+          <script>
+          // Initialize and add the map
+          function initMap() {
+            // The location of Uluru
+            var uluru = {lat: 34.131100, lng: -118.216070};
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 17, center: uluru});
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({position: uluru, map: map});
+          }
+              </script>
+              <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADGBWsEdFbuCg0xzSfPVrbm1mihab7ro4&callback=initMap">
+              </script>   
+
+</body>
+
+<footer>
+  <div class="container">
+    Copyright &copy;
+  </div>
+</footer>
+</body>
+
+</html>
