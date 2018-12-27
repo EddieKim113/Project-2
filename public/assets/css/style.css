@@ -165,4 +165,18 @@ footer {
   text-align: center;
   background: black;
   border-top: 8px solid white ;
+.hookah-menu{
+  float: left;
+  font-size : 15px;
+  width: 25%;
+}
+
+.menu-type{
+  font-size: 25px;
+  text-align: center;
+}
+
+.menu-price{
+  font-size: 20px;
+  text-align:center;
 }
