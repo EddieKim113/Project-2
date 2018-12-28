@@ -11,6 +11,11 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+var exphbs = require("express-handlebars");
+
+app.engine("handlbars", exphbs({ defaultLayout: "index" }));
+app.set("view engine", "handlbars");
+
 // Static directory
 app.use(express.static("app/public"));
 
@@ -24,7 +29,7 @@ var PORT = 8080;
 
 // Routes
 // =============================================================
-require("./app/routes/api-routes.js")(app);
+require("./app/routes/apiRoutes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
