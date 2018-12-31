@@ -17,7 +17,7 @@ app.engine("handlbars", exphbs({ defaultLayout: "index" }));
 app.set("view engine", "handlbars");
 
 // Static directory
-app.use(express.static("app/public"));
+app.use(express.static("public"));
 
 // Require dependencies
 var http = require("http");

@@ -9,11 +9,12 @@ module.exports = function(app) {
     // Each route handling HTML page that users get sent to
 
     app.get("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/landing.html"))
+        console.log("landing page");
+        res.sendFile(path.join(__dirname, '../public/landing.html'));
     });
 
     app.get("/home", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/index.html"));
+        res.sendFile(path.join(__dirname, '../public/index.html'));
     });
 
     app.get("/menu", function(req,res) {
