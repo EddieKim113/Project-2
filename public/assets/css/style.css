@@ -1,114 +1,197 @@
-/*navbar formats*/
+/*Navbar Formats, Main Page*/
 
 #logo {
-    width: 400px;
+  height: auto;
+  width: auto;
+  max-height: 72px;
+  max-width: 250px;
        
-}
-
-.nav-drop {
-    position: absolute;
-    top: 20px;
-    right: 0px;
-    margin-top: 15px;
-    display: none;
   }
-
-#imortal {
-	height: 400px;
-	margin-top: 50px;
-}
-
-.navbar-default {
-	background-color: black; 
-    border-bottom-color: white;
+  
+  .nav-drop {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  margin-top: 15px;
+  display: none;
+  }
+  
+  #imortal {
+  height: 400px;
+  margin-top: 50px;
+  }
+  
+  .navbar-default {
+  
+  background-color: black; 
+  border-bottom-color: white;
+  height: 100px;
+       
+  }
+  
+  .item img {
+  object-fit: cover; 
+  width: 100%;
+  height: 525px !important;  
+  }
+  
+  /* Menu */
+  
+  .hookah-menu{
+    float: left;
+    font-size : 15px;
+    width: 370px;
+    text-align: left;
+   
+   
+  
     
-}
-
-.item img {
-	object-fit: cover; 
-	width: 100%;
-	height: 525px !important; 
-
-}
-
-/* contact */
-
-body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 34px;
-    color: #777;
-    background-color: black;
     
+    
+  
+   }
+   
+   /* .menu-type{
+    font-size: 40px;
+    text-align: center;
+   }
+   
+   .menu-price{
+    font-size: 25px;
+    text-align:center;
+   } */
+  
+  /* Reservation page */
+  
+  .card-header,h4{
+    font-size: 40px;
+    text-align: center;
+       
+    }
+  
+  .card-body{
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    max-width: 410px;
+    padding: 5px;
+    margin: 0 0 40px;
+  }
+  
+  .btn-primary{
+    background-color: white;
+    color: gray;
+  } 
+  
+  /* Hours */
+  
+  #map{
+  border: 1px solid white;
+  margin-bottom: 100px;
+  width: 100%;
+  height:400px;
+  float: left;
+  }
+  
+  .div,p{
+    text-align: center;
+    margin: 20px;
+  
+  }
+  .col-sm-6{
+    text-align: center;
+    display: block;
+    list-style: none;
+   }
+    
+  /* main */
+  
+  body {
+  font-family: 'Indie Flower', cursive, sans-serif;
+  font-size: 18px;
+  line-height: 34px;
+  color: #777;
+  background-color: black;  
   }
   
   * {
     box-sizing: border-box;
     margin: 0;
   }
-
-
-
-html,
-body {
-  height: 100%;
-}
-
-.wrapper {
+  
+  .wrapper {
   height: auto !important;
   height: 100%;
   min-height: 100%;
   margin: 0 auto -105px;
-}
-
-footer,
-.push {
+  }
+  
+  footer,
+  .push {
   height: 105px;
-}
-/* main */
- 
+  }
+  
+  /* Contact Page */
+  
+  
+  
   .main-section {
     float: left;
     width: 100%;
-    max-width: 600px;
-    padding: 30px;
+    max-width: 500px;
+    padding: 5px;
     margin: 0 0 40px;
-    background: black;
-    border: 1px solid #ddd;
+    
+    
+    /* border-top: 2px solid #eee; */
+    /* border: 1px solid #ddd; */
+  
   }
-
-  /* contact page */
+  
+  
   .sidebar {
     float: right;
     width: 100%;
     max-width: 270px;
-    padding: 30px;
+    padding: 10px;
     margin-bottom: 20px;
-    background: black;
-    border: 1px solid #ddd;
+  
+    /* border: 1px solid #ddd; */
+    
+  }
+  span {
+    font-size: 30px;
+    content: "\260E";
+    color: #ddd;
   }
   
   h3,
-  .sidebar h2 {
+  .sidebar h2,h3 {
     padding-bottom: 20px;
     margin-bottom: 15px;
     line-height: 22px;
     border-bottom: 2px solid #eee;
+    text-align: -webkit-center;
+  
+     
   }
   
-  .social {
+   .social {
     width: 62px;
     height: 62px;
     margin-top: 8px;
     margin-right: 5px;
-  }
+    
+    /* display: block; */
+  } 
   
   .social:last-child {
     margin-right: 0;
   }
   
-
-#contact-form ul {
+  
+  #contact-form ul {
     margin-bottom: 20px;
   }
   
@@ -145,8 +228,9 @@ footer,
     background: white;
     border: 0 none;
   }
-
-
+  
+  /* footer */
+  
   footer {
     padding: 30px 0;
     clear: both;
