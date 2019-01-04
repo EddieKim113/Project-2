@@ -13,15 +13,11 @@ app.use(express.json());
 
 var exphbs = require("express-handlebars");
 
-app.engine("handlbars", exphbs({ defaultLayout: "index" }));
-app.set("view engine", "handlbars");
+app.engine("handlebars", exphbs({ defaultLayout: "index" }));
+app.set("view engine", "handlebars");
 
 // Static directory
-app.use(express.static("app/public"));
-
-// Require dependencies
-var http = require("http");
-var fs = require("fs");
+app.use(express.static("public"));
 
 // Set our port to 8080
 var PORT = 8080;
