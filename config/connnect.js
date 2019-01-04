@@ -1,25 +1,19 @@
 // Initiates connection to MySQL 
 
-// Require mysql
-var mysql = require("mysql");
+// Dependencies
+var Sequelize = require("sequelize");
 
-// Connection information
-var connection = mysql.createConnection({
-    port: 3306,
+// Creates mySQL connection using Sequelize, empty string is password
+var sequelize = new Sequelize("reservation", "root", "", {
     host: "localhost",
-    user: "root",
-    password: "",
-    database: "hookah_db"
-});
-
-// Connect to the database
-connection.connect(function(err) {
-    if (err) {
-        console.log("error connecting: " + err.stack);
-        return;
+    port: 8080,
+    dialect: "mysql",
+    pool: {
+        max: 5,
+        min: 0,
+        idle: 10000
     }
-    console.log("connection as id " + connection.threadId);
 });
 
-module.exports = connection;
-
+// Exports connection for other files to use
+module.exports = sequelize;

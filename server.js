@@ -11,6 +11,8 @@ var PORT = process.env.PORT || 8080;
 // Static directory
 app.use(express.static("public"));
 
+var db = require("./models");
+
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -24,8 +26,10 @@ app.set("view engine", "handlebars");
 // =============================================================
 require("./routes")(app);
 
-// Starts the server to begin listening
-// =============================================================
-app.listen(PORT, function() {
-  console.log("Server listening on: http://localhost:" + PORT);
+// sync the models with our db
+db.sequelize.sync({ force: true }).then(function() {
+    
+    app.listen(PORT, function() {
+        console.log("Express server listening on port " + PORT);
+    });
 });
