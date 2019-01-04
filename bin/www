@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var debug = require("debug")("express-example");
+
+// bring in app exported from server.js
+var app = require("../server");
+
+// bring in mdoels we exported with index.js
+var db = require("../models");
+
+// set the port of the app
+app.set("port", process.env.PORT || 3000);
+
+// sync the models with our db
+db.sequelize.sync().then(function() {
+    
+    var server = app.listen(app.get("port"), function() {
+        debug("Express server listening on port " + server.address().port);
+    });
+});
+
+
+
