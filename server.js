@@ -13,7 +13,7 @@ app.use(express.json());
 
 var exphbs = require("express-handlebars");
 
-app.engine("handlbars", exphbs({ defaultLayout: "index" }));
+app.engine("handlbars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlbars");
 
 // Static directory
