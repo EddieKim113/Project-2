@@ -9,7 +9,7 @@ module.exports = function(app) {
     // Each route handling HTML page that users get sent to
 
     app.get("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/landing.html"))
+        res.sendFile(path.join(__dirname, "../public/landing.html"));
     });
 
     app.get("/home", function(req, res) {
@@ -30,6 +30,6 @@ module.exports = function(app) {
 
     app.get("/contact", function(req,res) {
         res.sendFile(path.join(__dirname, "../public/contact.html"));
-});
+    });
 
 };
