@@ -22,7 +22,7 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
-require("./routes/htmlRoutes.js")(app);
+require("./routes")(app);
 
 // Starts the server to begin listening
 // =============================================================
