@@ -27,7 +27,7 @@ app.set("view engine", "handlebars");
 require("./routes")(app);
 
 // sync the models with our db
-db.sequelize.sync().then(function() {
+db.sequelize.sync({ force: true }).then(function() {
     
     app.listen(PORT, function() {
         console.log("Express server listening on port " + PORT);
