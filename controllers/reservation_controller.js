@@ -1,5 +1,5 @@
 var path = require("path");
-var db = requires("../models");
+var db = require("../models");
 
 exports.index = function(req, res) {
 
@@ -10,7 +10,7 @@ exports.index = function(req, res) {
             reservations: reservations
         };
         console.log(hbsObject);
-        res.render("reservations", hbsObject);
+        res.render("index", hbsObject);
     });
 
     
