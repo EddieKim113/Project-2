@@ -4,7 +4,7 @@
 var Sequelize = require("sequelize");
 
 // Creates mySQL connection using Sequelize, empty string is password
-var sequelize = new Sequelize("hookah_db", "root", "", {
+var sequelize = new Sequelize("reservation", "root", "", {
     host: "localhost",
     port: 8080,
     dialect: "mysql",
