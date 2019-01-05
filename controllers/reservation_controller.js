@@ -16,7 +16,12 @@ exports.index = function(req, res) {
     
 
 };
+// exports.makeReservation = function(req, res) {
 
+<<<<<<< HEAD
+// };
+=======
 // exports.makeReservation = function(req, res) {
 
 // }
+>>>>>>> master
