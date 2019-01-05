@@ -1,6 +1,34 @@
-<h1>Current Reservation</h1>
+<div class="card">
+          <div class="card-header">
+          <h4>Current Reservation</Table></h4>
+          </div>
 
+          {{!-- <ul class = "one">
+            <li class="two">
+              <a class ="three" href="#">
+                <h2>Date</h2>
+                <h2>Time</h2>
+                <h2>Type</h2>
+                <h2>peopel</h2>
+              </a>
+            </li>
+          </ul> --}}
 
+          <ul class = "one">
+            {{#each reservation }}
+            <li class="two">{{date}}</li>
+            <li class="two">{{time}}</li>
+            <li class="two">{{type}}</li>
+            <li class="two">{{partySize}}</li>
+            {{/each}}
+          </ul>
+{{!-- name: DataTypes.STRING,
+        phone: DataTypes.INTEGER,
+        type: DataTypes.STRING,
+        email: DataTypes.STRING,
+        partySize: DataTypes.INTEGER,
+        date: DataTypes.DATEONLY,
+        time: DataTypes.TIME --}}
 
 <div class="card">
             <div class="card-header">
