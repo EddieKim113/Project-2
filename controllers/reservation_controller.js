@@ -17,6 +17,7 @@ exports.index = function(req, res) {
 
 };
 
+
 exports.makeReservation = function(req, res) {
     db.Reservation.create({
         name: req.body.name,
@@ -30,3 +31,4 @@ exports.makeReservation = function(req, res) {
         res.json(dbReservation);
     });
 }
+
