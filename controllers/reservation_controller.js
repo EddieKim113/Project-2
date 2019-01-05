@@ -17,6 +17,16 @@ exports.index = function(req, res) {
 
 };
 
-// exports.makeReservation = function(req, res) {
-
-// }
+exports.makeReservation = function(req, res) {
+    db.Reservation.create({
+        name: req.body.name,
+        phone: req.body.phone,
+        type: req.body.type,
+        email: req.body.email,
+        partySize: req.body.partySize,
+        date: req.body.date,
+        time: req.body.time
+    }).then(function(dbReservation) {
+        res.json(dbReservation);
+    });
+}
