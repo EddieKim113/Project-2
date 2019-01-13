@@ -8,10 +8,10 @@
       "dialect": "mysql"
     },
     "test": {
-      "username": "root",
-      "password": "",
-      "database": "database_test",
-      "host": "127.0.0.1",
+      "username": "v74u2hggtpj63ch8",
+      "password": "x51hjnjgx08yldhz",
+      "database": "l2l9cc22h1dkktkl",
+      "host": "ofcmikjy9x4lroa2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "port": 3306,
       "dialect": "mysql"
     },
